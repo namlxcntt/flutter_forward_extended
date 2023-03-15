@@ -36,11 +36,11 @@ ThemeData get themeDark {
 //   FontWeight.w900: 'Black',
 // }
 TextTheme get getTextTheme {
-  return GoogleFonts.nunitoTextTheme().copyWith(
+  return GoogleFonts.nunitoSansTextTheme().copyWith(
       //Header Home Title
       titleLarge: const TextStyle(
-        fontSize: 30,
-        fontWeight: FontWeight.w700,
+        fontSize: 26,
+        fontWeight: FontWeight.w500,
         color: Colors.black,
         height: 1.1,
       ),

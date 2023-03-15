@@ -6,15 +6,5 @@ abstract class HomeEvent extends Equatable {
 
 class GetListNoteEvent extends HomeEvent {
   @override
-  List<Object?> get props => [hashCode];
-}
-
-class CreateNoteDefaultEvent extends HomeEvent {
-
-  final List<Note> note;
-
-  const CreateNoteDefaultEvent(this.note);
-
-  @override
-  List<Object?> get props => [note];
+  List<Object?> get props => [];
 }

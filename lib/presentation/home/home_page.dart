@@ -15,37 +15,21 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List<Note> listNoteDefault = [
-    Note(
-        id: 1,
-        dateCreated: DateTime.now(),
-        title: "Hello",
-        description:
-            'Today’s Shoppng List\n Ticket App Travel Website\n Digital marketing Website.\n Apple Cuo noodles\n'),
-    Note(
-        id: 2,
-        dateCreated: DateTime.utc(2023),
-        title: "Flutter",
-        description: 'Migrate Flutter to Android Developer'),
-    Note(
-        id: 3,
-        dateCreated: DateTime.now(),
-        title: 'Clean Architecture',
-        description:
-            'Today’s Shoppng List\nT icket App Travel Website\nDigital marketing Website.\nApple Cuo noodles')
-  ];
+
 
   @override
   void initState() {
-    context.read<HomeBloc>().add(GetListNoteEvent());
+    getListNotes();
     super.initState();
   }
 
+  void getListNotes(){
+    context.read<HomeBloc>().add(GetListNoteEvent());
+  }
 
   void navigateAddNote(){
     context.navigateRoute(AppRoute.createNote).then((value){
-      if(value != null && value is Note){
-      }
+      getListNotes();
     });
   }
 
@@ -82,7 +66,6 @@ class _HomePageState extends State<HomePage> {
                 if (state is GetListNoteState) {
                   var list = state.listData;
                   if (list.isEmpty) return Container();
-
                   return MasonryGridView.builder(
                     padding: const EdgeInsets.only(top: 24),
                     itemCount: list.length,

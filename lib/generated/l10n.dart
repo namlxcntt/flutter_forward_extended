@@ -59,6 +59,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Create Notes`
+  String get createNotes {
+    return Intl.message(
+      'Create Notes',
+      name: 'createNotes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Title`
+  String get title {
+    return Intl.message(
+      'Title',
+      name: 'title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Typing something..`
+  String get contentTyping {
+    return Intl.message(
+      'Typing something..',
+      name: 'contentTyping',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

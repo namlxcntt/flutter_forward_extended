@@ -36,7 +36,8 @@ class ItemNoteHome extends StatelessWidget {
           Text(
             note.description,
             style: context.themeText().displayMedium?.copyWith(
-                fontSize: 13
+                fontSize: 13,
+              color:  Colors.black.withOpacity(0.7)
             ),
           )
         ],

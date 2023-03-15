@@ -1,3 +1,6 @@
 {
-  "notes" : "Notes"
+  "notes" : "Notes",
+  "createNotes" : "Create Notes",
+  "title" : "Title",
+  "contentTyping" : "Typing something.."
 }
