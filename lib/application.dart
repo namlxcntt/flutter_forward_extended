@@ -5,6 +5,7 @@ import 'package:flutter_forward_extend/presentation/create/bloc/create_note_bloc
 import 'package:flutter_forward_extend/presentation/home/bloc/home_bloc.dart';
 import 'package:flutter_forward_extend/presentation/utils/routes/app_routes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'generated/l10n.dart';
 import 'presentation/utils/theme/export_theme.dart';
 

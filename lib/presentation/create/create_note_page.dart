@@ -69,6 +69,9 @@ class _CreateNotePageState extends State<CreateNotePage> {
           child: Column(
             children: [
               TextField(
+                style: context.themeText().displayMedium?.copyWith(
+                  fontSize: sizeLargeSmall
+                ),
                 controller: _titleController,
                 decoration: InputDecoration(
                   errorText: textErrorTitle,
@@ -84,6 +87,9 @@ class _CreateNotePageState extends State<CreateNotePage> {
               ),
               Expanded(
                 child: TextField(
+                  style: context.themeText().displayMedium?.copyWith(
+                      fontSize: sizeMedium
+                  ),
                   controller: _contentController,
                   maxLines: 20,
                   decoration: InputDecoration(

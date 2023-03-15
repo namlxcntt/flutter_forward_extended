@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,8 +16,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   final GetListNoteUseCase _getListNoteUseCase;
   final CreateNoteUseCase _createNoteUseCase;
 
-  HomeBloc({required CreateNoteUseCase createNoteUseCase, required GetListNoteUseCase getListNoteUseCase})
-      : _createNoteUseCase = createNoteUseCase, _getListNoteUseCase = getListNoteUseCase, super(HomeInitial()) {
+  HomeBloc(
+      {required CreateNoteUseCase createNoteUseCase,
+      required GetListNoteUseCase getListNoteUseCase})
+      : _createNoteUseCase = createNoteUseCase,
+        _getListNoteUseCase = getListNoteUseCase,
+        super(HomeInitial()) {
     on<GetListNoteEvent>((event, emit) async {
       await handleGetListNote(event, emit);
     });
@@ -34,11 +36,11 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
   handleGetListNote(GetListNoteEvent event, Emitter<HomeState> emitter) async {
     var data = await _getListNoteUseCase.execute(GetListNoteParam());
-    if(data.isEmpty) {
+    if (data.isEmpty) {
       await createDefaultNote();
       var defaultData = await _getListNoteUseCase.execute(GetListNoteParam());
       emitter(GetListNoteState(defaultData));
-    }else{
+    } else {
       emitter(GetListNoteState(data));
     }
   }
