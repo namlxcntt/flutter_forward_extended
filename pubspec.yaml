@@ -1,0 +1,61 @@
+name: flutter_forward_extend
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.4 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  #equatable
+  equatable: ^2.0.3
+  #json_annotation: Json Parsing
+  json_annotation: ^4.4.0
+  #get_it: Dependency
+  get_it: ^7.2.0
+  #retrofit: Network
+  retrofit: ^3.0.1+1
+  #dio: Network
+  dio: ^4.0.6
+  #path_provider & path: Manager file path
+  path_provider: ^2.0.0
+  path: ^1.8.2
+  #drift: Support data sql local
+  drift: ^2.1.0
+
+  intl: ^0.17.0
+  flutter_svg: ^1.1.1+1
+  syncfusion_flutter_gauges: ^20.2.40
+  animations: ^2.0.3
+  shared_preferences: ^2.0.15
+  sqlite3_flutter_libs: ^0.5.0
+  flutter_bloc: ^8.1.2
+  bloc: ^8.0.3
+  provider: ^6.0.3
+  flutter_speed_dial: ^6.0.0
+  flutter_masked_text2: ^0.9.1
+  google_fonts: ^4.0.3
+  flutter_staggered_grid_view: ^0.6.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.2.0
+  json_serializable: '>4.4.0'
+  retrofit_generator: '>=4.0.0 <5.0.0'
+  drift_dev: ^2.1.0
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/raw/
+  uses-material-design: true
+flutter_intl:
+  enabled: true
